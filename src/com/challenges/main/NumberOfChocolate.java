@@ -23,12 +23,12 @@ public class NumberOfChocolate {
         }
     }
 
-    private static int getMaxChocolate(int n, int c, int m) {
-        int result = n / c;
+    private static int getMaxChocolate(int money, int costOfChoclate, int numOfWrappers) {
+        int result = money / costOfChoclate;
         int totalWrapp = result, chFrmw;
-        while (totalWrapp >= m) {
-            chFrmw = totalWrapp / m;
-            totalWrapp = totalWrapp % m + chFrmw;
+        while (totalWrapp >= numOfWrappers) {
+            chFrmw = totalWrapp / numOfWrappers;
+            totalWrapp = totalWrapp % numOfWrappers + chFrmw;
             result += chFrmw;
         }
         return result;

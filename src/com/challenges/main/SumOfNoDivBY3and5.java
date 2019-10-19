@@ -31,8 +31,13 @@ public class SumOfNoDivBY3and5 {
 
     private static long getSumWithInRange(long range, int divisor) {
         if (range >= divisor) {
-            long divi = (range - 1) / divisor;
-            return divisor * ((divi * (divi + 1)) >> 1);
+            long numberOfTerm = (range - 1) / divisor;
+            long result1 = divisor * ((numberOfTerm * (numberOfTerm + 1)) >> 1);
+
+            //n/2(2a+(n-1)d) since a = d
+            long result2 = (numberOfTerm*(divisor+divisor * numberOfTerm))/2;
+            System.out.println("res1:"+result1+" res2:"+result2);
+            return result1;
         } else {
             return 0;
         }

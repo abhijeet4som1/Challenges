@@ -8,8 +8,11 @@ public class NonRepeatingDigits {
     public static void main(String[] args) {
         Set<Integer> num=new HashSet<>();
         for(int i=1;i<=156;i++){
-            if(!has_duplicate_digits(i))
-            num.add(i);
+            if(has_duplicate_digits(i)){
+                System.out.println("duplicate digits:"+i);
+            } else {
+                num.add(i);
+            }
         }
         
         System.out.println(num.size());
